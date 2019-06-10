@@ -57,7 +57,7 @@ d3.csv("assets/data/data.csv")
 
     // Step 5: Create Circles
     // ==============================
-    var circlesGroup = chartGroup.selectAll("text")
+    var circlesGroup = chartGroup.selectAll()
     .data(Data)
     .enter()
     .append("circle")
@@ -69,7 +69,7 @@ d3.csv("assets/data/data.csv")
 
     // Step 6: Create text
     // ==============================
-    var textGroup = chartGroup.selectAll("text")
+    var textGroup = chartGroup.selectAll()
     .data(Data)
     .enter()
     .append("text")
@@ -111,8 +111,8 @@ d3.csv("assets/data/data.csv")
     // Create axes labels
     chartGroup.append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", 0 - margin.left + 40)
-      .attr("x", 0 - (height / 2))
+      .attr("y", 0 - margin.left + 50)
+      .attr("x", 0 - (height / 1.5))
       .attr("dy", "1em")
       .attr("class", "axisText")
       .attr("font-weight", "bold")
@@ -120,7 +120,7 @@ d3.csv("assets/data/data.csv")
       .text("Lacks Healthcare (%)");
 
     chartGroup.append("text")
-      .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
+      .attr("transform", `translate(${width / 2}, ${height + margin.top + 20})`)
       .attr("class", "axisText")
       .attr("font-weight", "bold")
       .attr("text-anchor", "start")
